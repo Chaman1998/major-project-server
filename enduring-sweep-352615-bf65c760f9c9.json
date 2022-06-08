@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "enduring-sweep-352615",
+  "private_key_id": "bf65c760f9c9d2c603cac25efdccb26446b57ef2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDMrojDWhMWLjxw\nzIhxSjsNqQpMZ/q8K1pHgevcov5IMqu77EZ9eBlfN3C90IwKtloTwpRs9dBDDMkd\nI6a8XZ38G1LEtsg4tUan7uehNZTUGPNzoX0vb/0lJZdhG4nJgACrU0opKBZBlC7s\nr+2xum1lPrZa3Cf2Nqhy8xwlpME8isjQkYP/darsWyY9LPU/t9dx/IF7ozFIY6j8\nBU2b8lHnVVIWwzUyk7cqxZvMWk+2PUE3hlkfGqKXfsq9PSPlrOkSJ5QVvPhElG2w\nyS2TFvwDoCpEajXDgMG4/7ZtaMY6r+WrRdfut6s4uoQFVJwPr1hF4IT1+YZpZX9B\nnhG79c+tAgMBAAECggEABPQ/gqzyM9H8LAXDUqynh8Hc6jMFFltdRMhP/2fhjDlP\nv01tell3Eb8rhyieTx8RSJOn2IhNmWXck0w626nPalv18aVz7K10j5mAeT4tA0I0\nWErjFwwYnjbN9m9+cwZaXcs3Cw55lW5DAX8Tm37l6XKuYr4b6IFzq86XEpEtjSvK\nsT2Fs70IUwpxljRGoxs3LB+IfbWay5ZGUAM6Drs99+dkzrolhsB0MlwR2S+dVvvP\n0dvMcS845TsvMHvxtVlRx0MHYO8+GQ83intcPQIoDDyS4lY1nCe3r5GacylUW5of\nDA4vsyKPswNu2OmKA+Vhep/if/hEEDdY3ho7elbU6QKBgQDrIy+jvj6qtEG3rsLs\ncS/rMLxjVr0rFIzDkhCgnr3gd3arUIA87A5eXqA2hwpWKnv78U2V9asu4apJwb8p\ngVk75TDr1UtfLd4hsAvv0tU2l1Nsltxe45Ksw8g5SXD8bxvz4zTwdxlOWtI7yYGC\n1id1MeYfDVICMkZ1UzH1RhjHaQKBgQDe15c5QgY2JqBUq5ETRovATZA6WQLUvy+N\n2wA+ch8l7LmJ6DNa5jdnwX3sT3IF9PRr8HdAUfURRZKXELFjm/Xj32hpjw9ZNiG5\nWczmiuUqlu04ggE9VkEkH1UZrvUpoTebaTaq+dsm1JszuOCgWzyzbX048hfLyxZP\ndPZoI6rhpQKBgCxT9tA0tlWyI82ACclPUUxSZMGJgaIUfrED4VSWeI9PljSXuYVC\nrzbFOgjtjlpOKg+GHy1NIhd1fYfoGaS2eN8cxws+q7XmzMCnEqkEoyNmhdir3CGb\nX3RoeF+sY7uDKs7gn4NRwJiP8KBKzbqfqtKiNJLYDQTS+4t0wq9NprA5AoGAPj+V\nA66Y05mYoe5HGU5UjYRdLJ9ethUt8H9jow33+30UGxzc86Bpi7c2OMO8g0N434oN\nlc8PGSMJHt/P3ZZcaqomnY4T6ITBiOg335KfD3WXkHhoZjzo93E1MXZ5D4b0ZJpQ\nZhRjjoZHUHxtav3xh+Gm4DhoQ0pY0htHFbIY8u0CgYEAjbh4S3zz4oGMcByg9LWq\nD0sgfvl1XkJ1zAsNQcS9+OWBVoF7/qzM3BaXFq/os8y29lDaYLY8XT1G+Z/oGNio\ntebXnfuOY6XxloX1gvcqTjGb0oII4yHGrHuyAQ1leC6dmDtOq3ZQLCEw21OYPxEM\nsEaKABZP5IYX5A79VJleqsQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "test-upload-video@enduring-sweep-352615.iam.gserviceaccount.com",
+  "client_id": "115788037555983776335",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/test-upload-video%40enduring-sweep-352615.iam.gserviceaccount.com"
+}
