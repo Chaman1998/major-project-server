@@ -1,4 +1,5 @@
 import ContestModal from "../models/contest.js";
+import FilesModel from '../models/files.js'
 import mongoose from "mongoose";
 
 export const createConst = async(req,res)=>{
@@ -84,14 +85,26 @@ export const updateContest = async(req,res)=>{
     }  
 };
 
+export const uploadFiles = (req, res) => {
+    try {
+        console.log(req.body)
+      const { filecreator, filecreatedAt, fileImage,
+        data } = req.body;
+      
+        const newFile = new FilesModel({
+            filecreator,
+            filecreatedAt,
+            fileImage,
+            data
+        })
 
+        console.log(newFile)
 
-// export const uploadFiles = (req, res) => {
-//     try {
-
-//         const 
+        newFile.save().then((savedFile) => {
+            res.json(savedFile)
+        }).catch(err => res.json(err))
         
-//     } catch (error) {
-        
-//     }
-// }
+    } catch (error) {
+        res.json(error)
+    }
+}
