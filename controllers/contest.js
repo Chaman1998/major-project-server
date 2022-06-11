@@ -14,6 +14,7 @@ export const createConst = async(req,res)=>{
         await newContest.save();
         res.status(201).json(newContest);
     } catch (error) {
+        console.log("1", error)
         res.status(404).json({message:"Something went wrong"});
     }
 };
@@ -25,6 +26,7 @@ export const getContests = async(req,res)=>{
         const contests = await ContestModal.find();
         res.status(200).json(contests);
     } catch (error) {
+        console.log("2", error)
         res.status(404).json({message:"Something went wrong"});
     }
 };
@@ -32,11 +34,13 @@ export const getContests = async(req,res)=>{
 // ==============For single data==============
 export const getContest = async(req,res)=>{
     const {id} = req.params;
+    console.log(id)
     try {
         const contest = await ContestModal.findById(id);
         console.log(contest);
         res.status(200).json(contest);
     } catch (error) {
+        console.log("3", error)
         res.status(404).json({message:"Something went wrong"});
     }
 };
@@ -60,6 +64,7 @@ export const deleteContest = async(req,res)=>{
         await ContestModal.findByIdAndRemove(id);
         res.json({message:'Content deleted successfully'});
     } catch (error) {
+        console.log("4", error)
         return res.status(404).json({message:"Something went wrong"});
     }  
 };
@@ -81,30 +86,41 @@ export const updateContest = async(req,res)=>{
         await ContestModal.findByIdAndUpdate(id,updatedContest,{new: true});
         res.json(updatedContest);
     } catch (error) {
+        console.log("5", error)
         return res.status(404).json({message:"Something went wrong"});
     }  
 };
 
-export const uploadFiles = (req, res) => {
+export const postUploadedFiles = (req, res) => {
     try {
-        console.log(req.body)
-      const { filecreator, filecreatedAt, fileImage,
-        data } = req.body;
-      
+
+        const { filecreator, filecreatedAt, fileImage, data } = req.body;
+
         const newFile = new FilesModel({
             filecreator,
             filecreatedAt,
             fileImage,
             data
-        })
+        });
 
-        console.log(newFile)
 
         newFile.save().then((savedFile) => {
-            res.json(savedFile)
-        }).catch(err => res.json(err))
-        
+            res.json(savedFile);
+            // ContestModal.deleteMany({}, (err) => {
+            //     if (err) {
+            //         console.log(err)
+            //         res.json(err)
+            //     } else {
+            //         res.json(savedFile);
+            //     }
+            // }).catch(err => { res.json(err) })
+           
+        }).catch(err => res.json(err));
+
+
+
     } catch (error) {
-        res.json(error)
+        res.json(error);
     }
 }
+

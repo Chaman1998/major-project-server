@@ -2,9 +2,11 @@ import bcrypt from 'bcryptjs';
 import { request } from 'express';
 import jwt from 'jsonwebtoken';
 import mongoose from "mongoose";
+import FilesModel from '../models/files.js';
 
 const secret = "test";
 import UserModal from '../models/user.js';
+import ContestModal from "../models/contest.js";
 
 //=====================SignIn=======================
 export const signin = async (req,res)=>{
@@ -99,5 +101,35 @@ export const updateUserProfile = async(req,res)=>{
         console.log(updatedUserProfile);
     } catch (error) {
         return res.status(404).json({message:"Something went wrong"});
+    }
+}
+
+export const getUploadedFiles = (req, res) => {
+    try {
+        FilesModel.find().then((files) => {
+            res.json(files)
+        }).catch(err => {console.log(err); res.json(err)})
+
+    } catch(error) {
+        console.log(error)
+        res.json(error)
+    }
+}
+
+export const deleteContests = (req, res) => {
+    try {
+        
+        ContestModal.deleteMany({}, (err) => {
+            if (err) {
+                console.log(err)
+                res.json(err)
+            } else {
+                res.json({ message: "Contests deleted!" })
+            }
+        }).catch(err => { res.json(err) })
+
+    } catch(error) {
+        console.log(error)
+        res.json(error)
     }
 }
